@@ -1,0 +1,72 @@
+.BtnSelect {
+    width: 20%;
+    height: 40px;
+    text-align: left;
+    color: white;
+    background-color: rgb(73, 85, 97);
+    margin: 5px;
+    margin-left: 15px;
+    border-radius: 7px;
+}
+
+.DFlex {
+    display: flex;
+}
+
+.InputAdd {
+    width: 97%;
+    padding: 7px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.InputAddText {
+    width: 97%;
+    padding: 7px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 10px;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 300px;
+}
+
+.BtnAdd {
+    width: 10%;
+    height: 40px;
+    text-align: center;
+    color: white;
+    background-color: rgb(73, 85, 97);
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 7px;
+}
+
+.PStyle {
+    width: 20%;
+}
+
+
+.admin-item {
+    display: flex;
+}
+.spacer{
+    display: inline-block;
+    width: 150px;
+}
+
+.BtnsEdit{
+    width: 10%;
+    height: 40px;
+    text-align: center;
+    color: black;
+    background-color: whitesmoke;
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 7px;
+    border: 0px;
+    font-size: 15px;
+}

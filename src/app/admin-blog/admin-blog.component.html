@@ -1,0 +1,41 @@
+<div class="DFlex">
+  <button (click)="switchAdminPage('blogs')" class="BtnSelect">Blogs</button>
+  <div *ngIf="currentAdminPage === 'blogs'" class="admin-section">
+    <div *ngIf="isEditing" class="edit-form">
+      <input [(ngModel)]="editedBlog.title" placeholder="title" class="InputAdd" />
+      <textarea name="" id="" cols="30" rows="10" [(ngModel)]="editedBlog.description"
+        placeholder="text here..."class="InputAddText"></textarea>
+      <!-- <input [(ngModel)]="editedBlog.description" placeholder="text here..." /> -->
+      <input [(ngModel)]="editedBlog.name" placeholder="Author here..." class="InputAdd" />
+      <button (click)="updateBlog()" class="BtnsEdit">Save edit</button>
+      <button (click)="cancelEdit()" class="BtnsEdit">Cancel</button>
+    </div>
+    <div *ngIf="!isEditing" class="edit-form">
+      <input [(ngModel)]="newBlog.title" placeholder="title here..." class="InputAdd" />
+      <!-- <input [(ngModel)]="newBlog.description" placeholder="text here..."class="InputAddText"  /> -->
+      <textarea name="" id="" cols="30" rows="10" [(ngModel)]="newBlog.description" placeholder="text here..."
+        class="InputAddText"></textarea>
+      <input [(ngModel)]="newBlog.name" placeholder="author here..." class="InputAdd" />
+      <button (click)="addBlog()" class="BtnAdd">Додати</button>
+    </div>
+    <div class="DFlex">
+      <p class="PStyle">#</p>
+      <p class="PStyle">title </p>
+      <p class="PStyle">text </p>
+      <p class="PStyle"> author</p>
+      <p class="PStyle">edit</p>
+      <p class="PStyle">delete</p>
+    </div>
+
+    <div *ngFor="let blog of blogs; let i = index" class="admin-item">
+      <p>{{ i + 1 }}.<span class="spacer"></span> {{ blog.title }} <span class="spacer"></span> {{ blog.description }}
+        <span class="spacer"></span>
+        {{ blog.name }}<span class="spacer"></span>
+      </p>
+      <button (click)="editBlog(blog.id)" class="BtnAdd">Edit</button>
+      <button (click)="deleteBlog(blog.id)" class="BtnAdd">Delete</button>
+    </div>
+
+
+  </div>
+</div>

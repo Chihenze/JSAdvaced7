@@ -1,0 +1,9 @@
+<div class="DFlex">
+
+  <div *ngFor="let blog of blogs" class="blog-item">
+    <img src="https://t1.ua/photos/articles/2020/02/41078_553.jpg" alt="Фото блогу" width="300" height="300" />
+    <h3 class="Author">{{ blog.name }}</h3>
+    <h4 class="Title">{{ blog.title }}</h4>
+    <p>{{ blog.description }}</p>
+  </div>
+</div>
